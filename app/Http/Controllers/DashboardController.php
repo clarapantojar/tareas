@@ -11,6 +11,6 @@ class DashboardController extends Controller
     {
         $user = Auth::user();
         $tasks = $user->tasks;
-        return view('dashboard', compact('tasks'));
+        return view('dashboard', compact('tasks')); //En compact('task') -> la info que le pasamos a la vista
     }
 }

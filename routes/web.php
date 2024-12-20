@@ -14,6 +14,7 @@ Route::redirect('/', '/dashboard'); //el logout tampoco va a ir a la landing - r
 //     ->name('dashboard');
 
 # Ruta de tipo get para llamar al controller del dashboard, que devuelve la vista - Qué controller llamamos y qué función usamos
+# Route::get('vista', [ControladorController::class, 'funcion'])
 Route::get('/dashboard', [DashboardController::class, 'index'])
     ->middleware(['auth', 'verified'])
     ->name('dashboard');
